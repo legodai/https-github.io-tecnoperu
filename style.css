@@ -1,0 +1,62 @@
+/* Colores */
+:root {
+  --azul: #0b2a4a;
+  --verde: #198754;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 56px; /* espacio para el menú fijo */
+}
+
+h1, h2, h3 { color: var(--azul); }
+
+/* Menú */
+.barra { background-color: var(--azul); }
+
+/* Inicio (Flexbox) */
+.portada {
+  background-color: var(--azul);
+  color: white;
+  padding: 60px 0;
+}
+.portada h1 { color: white; }
+.portada-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.portada-imagen {
+  max-width: 480px;
+}
+
+/* Beneficios y programas (Grid de 3 columnas) */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.caja {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Pie de página (Flexbox) */
+.pie {
+  background-color: var(--azul);
+  color: white;
+  padding-top: 20px;
+}
+.pie-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+  .portada-flex, .pie-flex { flex-direction: column; }
+  .grid-3 { grid-template-columns: 1fr; }
+}
